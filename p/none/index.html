@@ -272,34 +272,34 @@
       <ol>
         <li><a href="#说明">说明</a></li>
         <li><a href="#代码">代码</a></li>
-        <li><a href="#图片">图片</a></li>
-        <li><a href="#引用">引用</a></li>
       </ol>
     </li>
     <li><a href="#读取数据并构建seurat对象">读取数据并构建Seurat对象</a>
       <ol>
         <li><a href="#说明-1">说明</a></li>
         <li><a href="#代码-1">代码</a></li>
-        <li><a href="#图片-1">图片</a></li>
-        <li><a href="#引用-1">引用</a></li>
+        <li><a href="#图片">图片</a></li>
       </ol>
     </li>
     <li><a href="#质量控制">质量控制</a>
       <ol>
         <li><a href="#说明-2">说明</a></li>
         <li><a href="#代码-2">代码</a></li>
+        <li><a href="#图片-1">图片</a></li>
       </ol>
     </li>
     <li><a href="#数据降维">数据降维</a>
       <ol>
         <li><a href="#说明-3">说明</a></li>
         <li><a href="#代码-3">代码</a></li>
+        <li><a href="#图片-2">图片</a></li>
       </ol>
     </li>
     <li><a href="#细胞分群">细胞分群</a>
       <ol>
         <li><a href="#说明-4">说明</a></li>
         <li><a href="#代码-4">代码</a></li>
+        <li><a href="#图片-3">图片</a></li>
       </ol>
     </li>
     <li><a href="#差异基因提取">差异基因提取</a>
@@ -312,6 +312,7 @@
       <ol>
         <li><a href="#说明-6">说明</a></li>
         <li><a href="#代码-6">代码</a></li>
+        <li><a href="#图片-4">图片</a></li>
       </ol>
     </li>
     <li><a href="#注释后差异基因可视化">注释后差异基因可视化</a>
@@ -461,15 +462,7 @@
 </span></span><span class="line"><span class="cl"><span class="nf">setwd</span><span class="p">(</span><span class="s">&#34;D:\\scRNA&#34;</span><span class="p">)</span><span class="c1">#将下载好的文件放于此处，前三个文件放于tumor文件夹，后三个放于normal文件夹</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="图片">图片
-</h3><blockquote>
-<p>None</p>
-</blockquote>
-<h3 id="引用">引用
-</h3><blockquote>
-<p>None</p>
-</blockquote>
-<h2 id="读取数据并构建seurat对象">读取数据并构建Seurat对象
+</div><h2 id="读取数据并构建seurat对象">读取数据并构建Seurat对象
 </h2><h3 id="说明-1">说明
 </h3><p>将“tumor”和“normal”文件夹中的“XXX_features.tsv.tz”，“XXX_barcodes.tsv.tz”，“XXX_matrix.mtx.tz”三个文件分别重命名为：“features.tsv.tz”，“barcodes.tsv.tz”，“matrix.mtx.tz”。这样才能被Read10X函数读取。</p>
 <h3 id="代码-1">代码
@@ -547,7 +540,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#查看log2x的分布情况，x是基因表达量，见fig.1A</span>
 </span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;hist1.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="nf">hist</span><span class="p">(</span><span class="nf">log2</span><span class="p">(</span><span class="n">scRNA_data_t</span><span class="o">@</span><span class="n">x</span><span class="p">),</span><span class="n">breaks</span><span class="o">=</span><span class="m">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">hist</span><span class="p">(</span><span class="nf">log2</span><span class="p">(</span><span class="n">scRNA_data_t</span><span class="o">@</span><span class="n">x</span><span class="p">),</span><span class="n">breaks</span><span class="o">=</span><span class="m">100</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#得到该样本的基因名列表和细胞名列表</span>
@@ -603,14 +596,21 @@
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="图片-1">图片
-</h3><blockquote>
-<p>None</p>
-</blockquote>
-<h3 id="引用-1">引用
-</h3><blockquote>
-<p>None</p>
-</blockquote>
+</div><h3 id="图片">图片
+</h3><p><img src="/p/none/fig.1.jpg"
+	width="2421"
+	height="2540"
+	srcset="/p/none/fig.1_hu8271480361259359764.jpg 480w, /p/none/fig.1_hu240688031387457585.jpg 1024w"
+	loading="lazy"
+	
+		alt="png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="228px"
+	
+></p>
 <h2 id="质量控制">质量控制
 </h2><h3 id="说明-2">说明
 </h3><h3 id="代码-2">代码
@@ -778,7 +778,22 @@
 </span></span><span class="line"><span class="cl"><span class="nf">dim</span><span class="p">(</span><span class="n">pbmc_scaled</span><span class="p">)</span><span class="c1">#查看数据维数，即查看筛选后还有多少个细胞，多少个基因</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="数据降维">数据降维
+</div><h3 id="图片-1">图片
+</h3><p><img src="/p/none/fig.2.jpg"
+	width="2480"
+	height="4297"
+	srcset="/p/none/fig.2_hu18047489738577364874.jpg 480w, /p/none/fig.2_hu17460966306697762389.jpg 1024w"
+	loading="lazy"
+	
+		alt="jpg"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="57"
+		data-flex-basis="138px"
+	
+></p>
+<h2 id="数据降维">数据降维
 </h2><h3 id="说明-3">说明
 </h3><h3 id="代码-3">代码
 </h3><div class="highlight"><div class="chroma">
@@ -849,7 +864,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#PCA</span>
 </span></span><span class="line"><span class="cl"><span class="n">pbmc</span> <span class="o">&lt;-</span> <span class="nf">RunPCA</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">)</span> <span class="c1">#进行主成分分析</span>
-</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;scaled_data.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span><span class="c1">#可视化不同主成分的贡献，fig.3C</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;elbow.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span><span class="c1">#可视化不同主成分的贡献，fig.3C</span>
 </span></span><span class="line"><span class="cl"><span class="nf">ElbowPlot</span><span class="p">(</span><span class="n">pbmc</span><span class="p">,</span><span class="n">ndims</span> <span class="o">=</span> <span class="m">30</span><span class="p">)</span> 
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
@@ -859,15 +874,15 @@
 </span></span><span class="line"><span class="cl"><span class="n">pbmc</span> <span class="o">&lt;-</span> <span class="nf">FindNeighbors</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">,</span> <span class="n">dims</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span> <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#39;pca&#39;</span><span class="p">)</span><span class="c1">#根据前30个主成分构建细胞间邻接图</span>
 </span></span><span class="line"><span class="cl"><span class="n">pbmc</span> <span class="o">&lt;-</span> <span class="nf">FindClusters</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">,</span><span class="n">resolution</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">cluster.name</span> <span class="o">=</span> <span class="s">&#39;unintegrated_clusters&#39;</span><span class="p">)</span><span class="c1">#进行聚类（预聚类）</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;pca.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制PCA图，fig.3.C</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;pca.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制PCA图，fig.3.D</span>
 </span></span><span class="line"><span class="cl"><span class="nf">DimPlot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">,</span> <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#34;pca&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;tsne.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制t-SNE图，fig.3.D</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;tsne.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制t-SNE图，fig.3.E</span>
 </span></span><span class="line"><span class="cl"><span class="nf">DimPlot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">,</span> <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#34;tsne&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;umap.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制UMAP图，fig.3.E</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;umap.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="c1">#绘制UMAP图，fig.3.F</span>
 </span></span><span class="line"><span class="cl"><span class="nf">DimPlot</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc</span><span class="p">,</span> <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#34;umap&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
@@ -879,7 +894,22 @@
 </span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="细胞分群">细胞分群
+</div><h3 id="图片-2">图片
+</h3><p><img src="/p/none/fig.3.jpg"
+	width="2480"
+	height="3993"
+	srcset="/p/none/fig.3_hu12661156506592181764.jpg 480w, /p/none/fig.3_hu516162251134176563.jpg 1024w"
+	loading="lazy"
+	
+		alt="jpg"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="62"
+		data-flex-basis="149px"
+	
+></p>
+<h2 id="细胞分群">细胞分群
 </h2><h3 id="说明-4">说明
 </h3><h3 id="代码-4">代码
 </h3><div class="highlight"><div class="chroma">
@@ -1018,9 +1048,26 @@
 </span></span><span class="line"><span class="cl"><span class="nf">Idents</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">)</span> <span class="o">=</span> <span class="s">&#39;seurat_clusters&#39;</span> 设置<span class="n">metadata中默认索引是</span>‘<span class="n">seurat_clusters</span>’
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="差异基因提取">差异基因提取
+</div><h3 id="图片-3">图片
+</h3><p><img src="/p/none/fig.4.jpg"
+	width="2480"
+	height="6603"
+	srcset="/p/none/fig.4_hu11041268663412577786.jpg 480w, /p/none/fig.4_hu2371987500419723844.jpg 1024w"
+	loading="lazy"
+	
+		alt="jpg"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="37"
+		data-flex-basis="90px"
+	
+></p>
+<h2 id="差异基因提取">差异基因提取
 </h2><h3 id="说明-5">说明
-</h3><h3 id="代码-5">代码
+</h3><p>使用FindAllMarkers函数提取每一组内的差异表达基因，分组依据是上述的resolution=0.5时的自动分组，即‘Seurat clusters’，也就是Idents(pbmc_2)。接着提取每组中差异表达最明显的3个基因提取出来，将它们在每一组细胞内的表达情况用热图、气泡图或小提琴图展示出来。注意！这三种图包含着同样的信息，选取一个即可。</p>
+<p>此外，FeaturePlot函数允许指定多个基因，并可视化这些基因在细胞中的表达情况，可以选择感兴趣的基因进行绘图。</p>
+<h3 id="代码-5">代码
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1084,80 +1131,86 @@
 </span><span class="lnt">59
 </span><span class="lnt">60
 </span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="c1">#载入clustree包</span>
-</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">clustree</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">  <span class="n">BiocManager</span><span class="o">::</span><span class="nf">install</span><span class="p">(</span><span class="s">&#34;clustree&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">clustree</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">pbmc_2</span> <span class="o">&lt;-</span> <span class="nf">JoinLayers</span><span class="p">(</span><span class="n">pbmc</span><span class="p">)</span><span class="c1">#将所有样本合在一起</span>
-</span></span><span class="line"><span class="cl"><span class="n">pbmc_2</span> <span class="o">&lt;-</span> <span class="nf">FindNeighbors</span><span class="p">(</span><span class="n">object</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="p">,</span> <span class="n">dims</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span> <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#39;pca&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">pbmc_2</span> <span class="o">&lt;-</span> <span class="nf">FindClusters</span><span class="p">(</span>
+<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">sc.markers</span> <span class="o">&lt;-</span> <span class="nf">FindAllMarkers</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">resolution</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">seq</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1.0</span><span class="p">,</span><span class="m">0.1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="c1">#分辨率0.1、0.2、0.3、...、1.0分别进行聚类，共聚类十次。</span>
+</span></span><span class="line"><span class="cl">  <span class="n">only.pos</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> <span class="c1">#保留上调与下调的基因</span>
+</span></span><span class="line"><span class="cl">  <span class="n">test.use</span> <span class="o">=</span> <span class="s">&#39;wilcox&#39;</span><span class="p">,</span> <span class="c1">#检验方法是wilcoxn检验</span>
+</span></span><span class="line"><span class="cl">  <span class="n">slot</span> <span class="o">=</span> <span class="s">&#39;data&#39;</span><span class="p">,</span> <span class="c1">#默认使用data而不是counts</span>
+</span></span><span class="line"><span class="cl">  <span class="n">min.pct</span> <span class="o">=</span> <span class="m">0.25</span><span class="p">,</span> <span class="c1">#该基因在至少25%的细胞内表达</span>
+</span></span><span class="line"><span class="cl">  <span class="n">logfc.threshold</span> <span class="o">=</span> <span class="m">0.25</span> <span class="c1">#设置log2FC的阈值</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="c1">#这个函数里没有指定分组，则它会使用默认分组依据，即Idents(pbmc_2)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">save</span><span class="p">(</span><span class="n">sc.markers</span><span class="p">,</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;ALL_MARKERS.rda&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#用clustree函数来可视化不同分辨率下的分类情况，fig.4.A</span>
-</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;clustree.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">clustree</span><span class="p">(</span><span class="n">pbmc_2</span><span class="o">@</span><span class="n">meta.data</span><span class="p">,</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;RNA_snn_res.&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">dev.off</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#取出每群表达中top3高的基因</span>
+</span></span><span class="line"><span class="cl"><span class="n">top3</span> <span class="o">&lt;-</span> <span class="n">sc.markers</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">avg_log2FC</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1">#以metadata中的‘cluster’来进行分类</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">p_val_adj</span> <span class="o">&lt;</span> <span class="m">0.05</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">top_n</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="n">avg_log2FC</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#查看不同分群情况下的umap图结果，fig.4.B</span>
-</span></span><span class="line"><span class="cl"><span class="n">p1</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.0.2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p1</span>
-</span></span><span class="line"><span class="cl"><span class="n">p2</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.0.3&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p2</span>
-</span></span><span class="line"><span class="cl"><span class="n">p3</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.0.4&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p3</span>
-</span></span><span class="line"><span class="cl"><span class="n">p4</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.0.5&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p4</span>
-</span></span><span class="line"><span class="cl"><span class="n">p5</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.0.6&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p5</span>
-</span></span><span class="line"><span class="cl"><span class="n">p6</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;RNA_snn_res.1&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">T</span><span class="p">);</span><span class="n">p6</span>
-</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">p1</span><span class="o">+</span><span class="n">p2</span><span class="o">+</span><span class="n">p3</span><span class="o">+</span><span class="n">p4</span><span class="o">+</span><span class="n">p5</span><span class="o">+</span><span class="n">p6</span>
-</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">filename</span> <span class="o">=</span> <span class="s">&#34;quality2.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">13</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">###差异基因可视化###</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#各绘图方式信息量一致，选择一种即可</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#选择合适的分辨率，这里选择0.5，共分为15类，这便是最终的分类</span>
-</span></span><span class="line"><span class="cl"><span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="o">$</span><span class="n">RNA_snn_res.0.5</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#绘制resolution=0.5时的最终umap图像，fig.4.C</span>
-</span></span><span class="line"><span class="cl"><span class="n">p1</span> <span class="o">&lt;-</span> <span class="nf">UMAPPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">               <span class="n">label</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">               <span class="n">repel</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">               <span class="n">group.by</span> <span class="o">=</span> <span class="s">&#39;seurat_clusters&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#热图，fig.5.A</span>
+</span></span><span class="line"><span class="cl"><span class="nf">DoHeatmap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">features</span> <span class="o">=</span> <span class="n">top3</span><span class="o">$</span><span class="n">gene</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">label</span> <span class="o">=</span> <span class="kc">TRUE</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">+</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#39;UMAP&#39;</span><span class="p">)</span><span class="o">+</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">theme_bw</span><span class="p">()</span><span class="o">+</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">face</span> <span class="o">=</span> <span class="s">&#39;bold&#39;</span><span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="n">plot.background</span> <span class="o">=</span> <span class="nf">element_rect</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;transparent&#39;</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span><span class="o">+</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">scale_color_igv</span><span class="p">();</span><span class="n">p1</span>
-</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">filename</span> <span class="o">=</span> <span class="s">&#34;final_umap.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">13</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_fill_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&#39;lightgrey&#39;</span><span class="p">,</span><span class="n">high</span> <span class="o">=</span> <span class="s">&#39;salmon&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;Heatmap.pdf&#39;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">Idents</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">)</span> <span class="o">=</span> <span class="s">&#39;seurat_clusters&#39;</span> 设置<span class="n">metadata中默认索引是</span>‘<span class="n">seurat_clusters</span>’
+</span></span><span class="line"><span class="cl"><span class="c1">#点图，fig.5.B</span>
+</span></span><span class="line"><span class="cl"><span class="nf">DotPlot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">group.by</span> <span class="o">=</span> <span class="s">&#39;seurat_clusters&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cols</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;lightgrey&#39;</span><span class="p">,</span><span class="s">&#39;salmon&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">features</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">top3</span><span class="o">$</span><span class="n">gene</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">coord_flip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;dotplot.pdf&#39;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#小提琴图，fig.5.C</span>
+</span></span><span class="line"><span class="cl"><span class="nf">VlnPlot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">object</span> <span class="o">=</span> <span class="n">pbmc_2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">group.by</span> <span class="o">=</span> <span class="s">&#39;seurat_clusters&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#fill.by = &#39;feature&#39;,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">stack</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">flip</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">features</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">top3</span><span class="o">$</span><span class="n">gene</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_fill_igv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;vlnplot.pdf&#39;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#对于感兴趣的基因进行绘图,fig.5.D</span>
+</span></span><span class="line"><span class="cl"><span class="nf">FeaturePlot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">features</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;CD8A&#39;</span><span class="p">,</span><span class="s">&#39;CD4&#39;</span><span class="p">,</span><span class="s">&#39;ZNF683&#39;</span><span class="p">,</span><span class="s">&#39;OLFM4&#39;</span><span class="p">),</span><span class="c1">#可以选择感兴趣的基因进行绘图</span>
+</span></span><span class="line"><span class="cl">  <span class="n">order</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">reduction</span> <span class="o">=</span> <span class="s">&#39;umap&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&#39;Featureplot.pdf&#39;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="细胞注释">细胞注释
+</div><p><img src="/p/none/fig.5.jpg"
+	width="2480"
+	height="7971"
+	srcset="/p/none/fig.5_hu717951010268252512.jpg 480w, /p/none/fig.5_hu16308376585515585737.jpg 1024w"
+	loading="lazy"
+	
+		alt="jpg"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="31"
+		data-flex-basis="74px"
+	
+></p>
+<h2 id="细胞注释">细胞注释
 </h2><h3 id="说明-6">说明
 </h3><h3 id="代码-6">代码
 </h3><div class="highlight"><div class="chroma">
@@ -1329,11 +1382,11 @@
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">11</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Plasma cells&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Intestinal epithelial cells&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;B cells&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Unknown&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Unknown&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Unknown&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;Tumor cells&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;T cells&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;NK cells&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">pbmc_2</span><span class="o">$</span><span class="n">seurat_clusters</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#39;NK cells&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&#39;Unknown&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">p1</span> <span class="o">&lt;-</span> <span class="nf">DimPlot</span><span class="p">(</span><span class="n">pbmc_2</span><span class="p">,</span><span class="n">reduction</span><span class="o">=</span><span class="s">&#39;umap&#39;</span><span class="p">,</span><span class="n">group.by</span> <span class="o">=</span> <span class="s">&#34;seurat_clusters&#34;</span><span class="p">,</span>
@@ -1388,7 +1441,22 @@
 </span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">filename</span> <span class="o">=</span> <span class="s">&#34;splited_umap.pdf&#34;</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">15</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="注释后差异基因可视化">注释后差异基因可视化
+</div><h3 id="图片-4">图片
+</h3><p><img src="/p/none/fig.6.jpg"
+	width="2480"
+	height="7691"
+	srcset="/p/none/fig.6_hu6323947058944349642.jpg 480w, /p/none/fig.6_hu11185242005636866196.jpg 1024w"
+	loading="lazy"
+	
+		alt="jpg"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="32"
+		data-flex-basis="77px"
+	
+></p>
+<h2 id="注释后差异基因可视化">注释后差异基因可视化
 </h2><h3 id="说明-7">说明
 </h3><h3 id="代码-7">代码
 </h3><div class="highlight"><div class="chroma">
