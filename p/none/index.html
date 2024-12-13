@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="#关于数据的准备\n1 2 3 4 5 6 7 8 9 10 #在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件。 if (!require(Seurat)){ BiocManager::install(&#34;Seurat&#34;) } library(Seurat) library(dplyr) library(ggplot2) library(ggsci) library(ggrepel) setwd(&#34;D:\\\\windowsdownload\\\\scRNA&#34;)#将下载好的文件放于此处，前三个文件放于tumor文件夹，后三个放于normal文件夹 ">
-<title>01数据集的准备</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基于Seurat包">
+<title>数据集的准备</title>
 
-<link rel='canonical' href='https://Detarame-ding.github.io/p/01%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%87%86%E5%A4%87/'>
+<link rel='canonical' href='https://Detarame-ding.github.io/p/none/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="01数据集的准备">
-<meta property='og:description' content="#关于数据的准备\n1 2 3 4 5 6 7 8 9 10 #在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件。 if (!require(Seurat)){ BiocManager::install(&#34;Seurat&#34;) } library(Seurat) library(dplyr) library(ggplot2) library(ggsci) library(ggrepel) setwd(&#34;D:\\\\windowsdownload\\\\scRNA&#34;)#将下载好的文件放于此处，前三个文件放于tumor文件夹，后三个放于normal文件夹 ">
-<meta property='og:url' content='https://Detarame-ding.github.io/p/01%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%87%86%E5%A4%87/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="数据集的准备">
+<meta property='og:description' content="基于Seurat包">
+<meta property='og:url' content='https://Detarame-ding.github.io/p/none/'>
 <meta property='og:site_name' content='鳕鱼-Detarame'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-12T20:10:43&#43;08:00'/><meta property='article:modified_time' content='2024-12-12T20:10:43&#43;08:00'/>
-<meta name="twitter:title" content="01数据集的准备">
-<meta name="twitter:description" content="#关于数据的准备\n1 2 3 4 5 6 7 8 9 10 #在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件。 if (!require(Seurat)){ BiocManager::install(&#34;Seurat&#34;) } library(Seurat) library(dplyr) library(ggplot2) library(ggsci) library(ggrepel) setwd(&#34;D:\\\\windowsdownload\\\\scRNA&#34;)#将下载好的文件放于此处，前三个文件放于tumor文件夹，后三个放于normal文件夹 ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://Detarame-ding.github.io/p/none/seurat_banner.jpg' />
+<meta name="twitter:title" content="数据集的准备">
+<meta name="twitter:description" content="基于Seurat包"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Detarame-ding.github.io/p/none/seurat_banner.jpg' />
     </head>
     <body class="
     article-page
@@ -246,17 +247,41 @@
     
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/none/">
+                <img src="/p/none/seurat_banner_hu16161462109621688713.jpg"
+                        srcset="/p/none/seurat_banner_hu16161462109621688713.jpg 800w, /p/none/seurat_banner_hu9546260091690285002.jpg 1600w"
+                        width="800" 
+                        height="176" 
+                        loading="lazy"
+                        alt="Featured image of post 数据集的准备" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/seurat/" >
+                Seurat
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/01%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%87%86%E5%A4%87/">01数据集的准备</a>
+            <a href="/p/none/">数据集的准备</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            基于Seurat包
+        </h3>
         
     </div>
 
@@ -276,7 +301,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-12-12</time>
+                <time class="article-time--published">2024-12-13</time>
             </div>
         
 
@@ -306,8 +331,8 @@
     <section class="article-content">
     
     
-    <p>#关于数据的准备</p>
-<div class="highlight"><div class="chroma">
+    <h1 id="01-数据集的准备">01 数据集的准备
+</h1><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -321,7 +346,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件。</span>
+<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="c1">#在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件。</span>
 </span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">Seurat</span><span class="p">)){</span>
 </span></span><span class="line"><span class="cl">  <span class="n">BiocManager</span><span class="o">::</span><span class="nf">install</span><span class="p">(</span><span class="s">&#34;Seurat&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -333,7 +358,11 @@
 </span></span><span class="line"><span class="cl"><span class="nf">setwd</span><span class="p">(</span><span class="s">&#34;D:\\windowsdownload\\scRNA&#34;</span><span class="p">)</span><span class="c1">#将下载好的文件放于此处，前三个文件放于tumor文件夹，后三个放于normal文件夹</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="引用">引用
+</h2><blockquote>
+<p>Unknown</p>
+</blockquote>
+
 </section>
 
 
