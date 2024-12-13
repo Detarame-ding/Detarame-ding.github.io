@@ -421,7 +421,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 19 分钟
+                    阅读时长: 20 分钟
                 </time>
             </div>
         
@@ -797,7 +797,8 @@
 ></p>
 <h2 id="数据降维">数据降维
 </h2><h3 id="说明-3">说明
-</h3><h3 id="代码-3">代码
+</h3><p>常见的降维方法有3种：主成分分析（PCA）、T-分布领域嵌入算法（t-SNE）和UMAP（统一流形逼近与投影）。三者数学原理大相径庭，但是作用都是将成千上万维的数据降低至二维（以便在二维平面上进行绘图），同时尽可能地保持高维空间内的分布特征。例如，高维空间中距离较远的点，在降至二维后距离仍应当较远，反之亦然。在本例中，对高维数据首先进行PCA降至30维，再使用t-SNE和UMAP算法，将该30维数据降至二维（直接用后两者降维可能会花费很长的时间）。此外，最终结果的展示和进一步分析推荐UMAP。</p>
+<h3 id="代码-3">代码
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -913,7 +914,8 @@
 ></p>
 <h2 id="细胞分群">细胞分群
 </h2><h3 id="说明-4">说明
-</h3><h3 id="代码-4">代码
+</h3><p>根据细胞之间的亲疏关系（即以基因表达量为坐标，高维空间内的距离远近）进行聚类。Seurat包中聚类方法是基于K临近算法（KNN算法）开发的。通过比较不同分辨率（resolution）下的分类情况，选择合适的分辨率作为最终的分类方法。</p>
+<h3 id="代码-4">代码
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1215,7 +1217,24 @@
 ></p>
 <h2 id="细胞注释">细胞注释
 </h2><h3 id="说明-6">说明
-</h3><h3 id="代码-6">代码
+</h3><p>细胞注释，即根据细胞高表达的基因的特征来为其指定一种细胞类型。所研究的marker基因可以参考相关文献、参考前人的经验、或者从CellMarker官网导出等。本例中，与免疫细胞相关的marker基因来源于别人总结好的经验，与肠道细胞相关的marker基因是从CellMarker官网上导出的：</p>
+<p><a class="link" href="http://117.50.127.228/CellMarker/index.html"  target="_blank" rel="noopener"
+    ><img src="/p/none/CellMarker2.jpeg"
+	width="439"
+	height="104"
+	srcset="/p/none/CellMarker2_hu11027654027863320400.jpeg 480w, /p/none/CellMarker2_hu2050711780003253907.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Cell Marer 2.0"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="422"
+		data-flex-basis="1013px"
+	
+></a></p>
+<p>在CellMarker2.0网站上检索肠道的分子Marker，在检索页面依次选择human&ndash;gastrointestinal tract&ndash;all，导出Table.csv，这里面便包含了肠道细胞的Marker基因。</p>
+<h3 id="代码-6">代码
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
@@ -1328,11 +1347,9 @@
 </span><span class="lnt">108
 </span><span class="lnt">109
 </span><span class="lnt">110
-</span><span class="lnt">111
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="c1">#cell marker可以参考文献，参考前人的经验、从CellMarker官网导出等</span>
-</span></span><span class="line"><span class="cl"><span class="n">immune_markers</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;CD8A&#39;</span><span class="p">,</span><span class="s">&#39;CD88&#39;</span><span class="p">,</span><span class="s">&#39;CD3D&#39;</span><span class="p">,</span><span class="s">&#39;CD3E&#39;</span><span class="p">,</span> <span class="c1">#CD8+T</span>
+<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">immune_markers</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;CD8A&#39;</span><span class="p">,</span><span class="s">&#39;CD88&#39;</span><span class="p">,</span><span class="s">&#39;CD3D&#39;</span><span class="p">,</span><span class="s">&#39;CD3E&#39;</span><span class="p">,</span> <span class="c1">#CD8+T</span>
 </span></span><span class="line"><span class="cl">                  <span class="s">&#39;CD4&#39;</span><span class="p">,</span> <span class="c1">#CD4+T</span>
 </span></span><span class="line"><span class="cl">                  <span class="s">&#39;ZNF683&#39;</span><span class="p">,</span> <span class="c1">#NKT</span>
 </span></span><span class="line"><span class="cl">                  <span class="s">&#39;NKG7&#39;</span><span class="p">,</span><span class="s">&#39;FCER1G&#39;</span><span class="p">,</span><span class="s">&#39;FGFBP2&#39;</span><span class="p">,</span><span class="s">&#39;FCGR3A&#39;</span><span class="p">,</span><span class="s">&#39;GZMH&#39;</span><span class="p">,</span><span class="s">&#39;TYROBP&#39;</span><span class="p">,</span><span class="s">&#39;IGFBP7&#39;</span><span class="p">,</span><span class="s">&#39;CD160&#39;</span><span class="p">,</span><span class="s">&#39;GZMB&#39;</span><span class="p">,</span> <span class="c1">#NK</span>
@@ -1461,7 +1478,8 @@
 ></p>
 <h2 id="注释后差异基因可视化">注释后差异基因可视化
 </h2><h3 id="说明-7">说明
-</h3><h3 id="代码-7">代码
+</h3><p>与上述寻找差异基因的过程类似，不过这次已经注释好了细胞类型，可以再次绘制差异表达基因的火山图、热图等，或者提取某一种特定的细胞，研究其在不同组间的表达差异。</p>
+<h3 id="代码-7">代码
 </h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
