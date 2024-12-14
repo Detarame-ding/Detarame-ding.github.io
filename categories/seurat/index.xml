@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Seurat on 鳕鱼-Detarame</title>
+        <link>https://Detarame-ding.github.io/categories/seurat/</link>
+        <description>Recent content in Seurat on 鳕鱼-Detarame</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>鳕鱼</copyright>
+        <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Detarame-ding.github.io/categories/seurat/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>基于Seurat的单细胞分析标准流程</title>
+        <link>https://Detarame-ding.github.io/p/%E5%9F%BA%E4%BA%8Eseurat%E7%9A%84%E5%8D%95%E7%BB%86%E8%83%9E%E5%88%86%E6%9E%90%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/</link>
+        <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://Detarame-ding.github.io/p/%E5%9F%BA%E4%BA%8Eseurat%E7%9A%84%E5%8D%95%E7%BB%86%E8%83%9E%E5%88%86%E6%9E%90%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;img src="https://Detarame-ding.github.io/p/%E5%9F%BA%E4%BA%8Eseurat%E7%9A%84%E5%8D%95%E7%BB%86%E8%83%9E%E5%88%86%E6%9E%90%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/seurat_banner.jpg" alt="Featured image of post 基于Seurat的单细胞分析标准流程" /&gt;&lt;h2 id=&#34;数据集的准备&#34;&gt;数据集的准备
+&lt;/h2&gt;&lt;h3 id=&#34;说明&#34;&gt;说明
+&lt;/h3&gt;&lt;p&gt;首先在https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224679下载GSM7029397_103_23_barcodes.tsv.gz、GSM7029397_103_23_features.tsv.gz、GSM7029397_103_23_matrix.mtx.gz；GSM7029398_103_26_barcodes.tsv.gz、GSM7029398_103_26_features.tsv.gz、GSM7029398_103_26_matrix.mtx.gz六个文件，其中前三个文件为有FAP家族史的肿瘤患者的单细胞测序文件，后三个文件为有FAP家族史的非肿瘤患者的单细胞测序文件。新建一个文件夹“scRNA”，并且在里面建立名为“tumor”和“normal”的文件夹，将前三个文件放入“tumor”文件夹，后三个文件放入“normal”文件夹。&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
