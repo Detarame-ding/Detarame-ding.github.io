@@ -10,9 +10,10 @@
 <meta property='og:description' content="Bulk-RNA测序上游分析——从reads到counts 转录组基础知识 以下记载了转录组最基础的一些知识，这些概念在RNA测序分析中是至关重要的：\n1、基因组Genome：指某一特定物种细胞内或病毒颗粒内的一整套遗传物质（DNA或RNA）。对于人类而言，人类细胞是二倍体，有2套染色体，其中任何一套染色体的DNA序列即为一个基因组，比如人类基因组就是1-22号染色体+X+Y。在广义上，线粒体DNA也可以算作基因组的一部分。\n">
 <meta property='og:url' content='https://Detarame-ding.github.io/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/'>
 <meta property='og:site_name' content='鳕鱼-Detarame'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-14T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://Detarame-ding.github.io/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/title.jpg' />
 <meta name="twitter:title" content="Rna测序分析的标准流程">
-<meta name="twitter:description" content="Bulk-RNA测序上游分析——从reads到counts 转录组基础知识 以下记载了转录组最基础的一些知识，这些概念在RNA测序分析中是至关重要的：\n1、基因组Genome：指某一特定物种细胞内或病毒颗粒内的一整套遗传物质（DNA或RNA）。对于人类而言，人类细胞是二倍体，有2套染色体，其中任何一套染色体的DNA序列即为一个基因组，比如人类基因组就是1-22号染色体+X+Y。在广义上，线粒体DNA也可以算作基因组的一部分。\n">
+<meta name="twitter:description" content="Bulk-RNA测序上游分析——从reads到counts 转录组基础知识 以下记载了转录组最基础的一些知识，这些概念在RNA测序分析中是至关重要的：\n1、基因组Genome：指某一特定物种细胞内或病毒颗粒内的一整套遗传物质（DNA或RNA）。对于人类而言，人类细胞是二倍体，有2套染色体，其中任何一套染色体的DNA序列即为一个基因组，比如人类基因组就是1-22号染色体+X+Y。在广义上，线粒体DNA也可以算作基因组的一部分。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Detarame-ding.github.io/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/title.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -283,10 +284,14 @@
             <li><a href="#讨论-1">讨论</a></li>
           </ol>
         </li>
-        <li><a href="#bulk-rna测序下游分析从counts开始">Bulk-RNA测序下游分析——从counts开始</a>
+      </ol>
+    </li>
+    <li><a href="#bulk-rna测序下游分析从counts开始">Bulk-RNA测序下游分析——从counts开始</a>
+      <ol>
+        <li><a href="#数据准备">数据准备</a></li>
+        <li><a href="#使用r语言进行分析">使用R语言进行分析</a>
           <ol>
-            <li><a href="#数据准备">数据准备</a></li>
-            <li><a href="#使用r语言进行分析">使用R语言进行分析</a></li>
+            <li></li>
           </ol>
         </li>
       </ol>
@@ -302,8 +307,20 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/">
+                <img src="/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/title_hu7671832727206781204.jpg"
+                        srcset="/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/title_hu7671832727206781204.jpg 800w, /p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/title_hu10298316804129902678.jpg 1600w"
+                        width="800" 
+                        height="293" 
+                        loading="lazy"
+                        alt="Featured image of post Rna测序分析的标准流程" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -355,7 +372,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 18 分钟
+                    阅读时长: 19 分钟
                 </time>
             </div>
         
@@ -1024,16 +1041,17 @@
 </li>
 </ul>
 <h5 id="讨论2如何度量基因表达丰度">讨论2：如何度量基因表达丰度？
-</h5>$$
+</h5><p>每个转录本生产呢个的read数目取决于很多因素，例如较长的转录本可能会产生较多的read，此外，转录组组成、GC偏差和随机引物也可能造成序列特异性偏差。为了比较不同不同基因之间的表达差异需要进行归一化处理。其中一个指标RPKM（reads per kilobase per million mapped reads，每百万作图的读段每千碱基的读段），由Mortazavi et.al引入：</p>
+$$
 \text{RPKM} = \frac{\text{numReads}}{\left(\frac{\text{geneExonLength}}{1000}\right) \times \left(\frac{\text{totalNumReads}}{1000000}\right)} 
-$$<p>
-即，认为一条基因的read数与基因长度和总read数成正比，故将其作为分母除来归一化。这样可以在同一样本中比较不同基因的表达差异。</p>
+$$<p>即，认为一条基因的read数与基因长度和总read数成正比，故将其作为分母除来归一化。这样可以在同一样本中比较不同基因的表达差异。</p>
+<p>对于双端测序，可以使用指标FPKM（fragments per kilobase per million mapped reads，每百万作图的读段每千碱基的片段）：</p>
 $$
 \text{FPKM} = \frac{\text{numFragments}}{\left(\frac{\text{geneExonLength}}{1000}\right) \times \left(\frac{\text{totalNumFragments}}{1000000}\right)}
-$$$$
+$$<p>这与RPKM非常的类似，Fragments指的是双端都匹配到同一个转录本上的read对，并且只计算一遍。此外，另一个指标称为TPM（transcript per million，每百万转录本）：</p>
+$$
 TPM_i = \frac{\frac{N_i}{L_i} \times 10^6}{\sum_{k=1}^{n} \frac{N_k}{L_k}} = \frac{RPKM_i}{\sum_{k=1}^{n} RPKM_k} \times 10^6
-$$<p>
-其中Ni指匹配到第i个转录本的read数，Li是第i个转录本的长度。TPM相当于是将RPKM或FPKM归一化，使得在不同样本中可以比较相同基因的表达差异。</p>
+$$<p>其中Ni指匹配到第i个转录本的read数，Li是第i个转录本的长度。TPM相当于是将RPKM或FPKM归一化，使得在不同样本中可以比较相同基因的表达差异。</p>
 <h5 id="讨论3操作中输出的countstxt的数据结构">讨论3：操作中输出的counts.txt的数据结构。
 </h5><p>该文件的最后几行如下所示：</p>
 <div class="highlight"><div class="chroma">
@@ -1059,9 +1077,9 @@ $$<p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>最后5行分别代表没有进行计数的原因和对应的读段数目：比对与任何基因均不重叠、其比对与多个基因重叠、对比质量低于阈值、完全没有比对以及比对到基因组中的多个位置。</p>
-<h3 id="bulk-rna测序下游分析从counts开始">Bulk-RNA测序下游分析——从counts开始
-</h3><h4 id="数据准备">数据准备
-</h4><div class="highlight"><div class="chroma">
+<h2 id="bulk-rna测序下游分析从counts开始">Bulk-RNA测序下游分析——从counts开始
+</h2><h3 id="数据准备">数据准备
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1181,8 +1199,8 @@ $$<p>
 </span></span><span class="line"><span class="cl">head -n -5 H4.txt &gt; H4.count.txt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="使用r语言进行分析">使用R语言进行分析
-</h4><p>1、将7个样本的counts合并到一个表格，然后保存在本地。在本例中，7个txt文件在工作目录下的data文件夹里。</p>
+</div><h3 id="使用r语言进行分析">使用R语言进行分析
+</h3><p>1、将7个样本的counts合并到一个表格，然后保存在本地。在本例中，7个txt文件在工作目录下的data文件夹里。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1649,7 +1667,7 @@ $$<p>
 	srcset="/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/fig_hu13588729010768890305.png 480w, /p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/fig_hu8964382468325597058.png 1024w"
 	loading="lazy"
 	
-		alt="image-20241214194821212"
+		alt="fig"
 	
 	
 		class="gallery-image" 
