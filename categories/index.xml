@@ -8,20 +8,20 @@
         <language>zh-cn</language>
         <copyright>鳕鱼</copyright>
         <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Detarame-ding.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Gene</title>
-        <link>https://Detarame-ding.github.io/categories/gene/</link>
-        <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://Detarame-ding.github.io/categories/gene/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>R</title>
         <link>https://Detarame-ding.github.io/categories/r/</link>
         <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
         
         <guid>https://Detarame-ding.github.io/categories/r/</guid>
         <description>&lt;img src="https://Detarame-ding.github.io/categories/r/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post R" /&gt;</description>
+        </item>
+        <item>
+        <title>RnaSeq</title>
+        <link>https://Detarame-ding.github.io/categories/rnaseq/</link>
+        <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://Detarame-ding.github.io/categories/rnaseq/</guid>
+        <description></description>
         </item>
         <item>
         <title>Seurat</title>

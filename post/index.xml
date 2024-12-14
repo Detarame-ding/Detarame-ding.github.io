@@ -8,13 +8,15 @@
         <language>zh-cn</language>
         <copyright>鳕鱼</copyright>
         <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Detarame-ding.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>基因命名规范</title>
-        <link>https://Detarame-ding.github.io/p/%E5%9F%BA%E5%9B%A0%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</link>
+        <title>Rna测序分析的标准流程</title>
+        <link>https://Detarame-ding.github.io/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://Detarame-ding.github.io/p/%E5%9F%BA%E5%9B%A0%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</guid>
-        <description>&lt;h2 id=&#34;null&#34;&gt;NULL
-&lt;/h2&gt;</description>
+        <guid>https://Detarame-ding.github.io/p/rna%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;h2 id=&#34;bulk-rna测序上游分析从reads到counts&#34;&gt;Bulk-RNA测序上游分析——从reads到counts
+&lt;/h2&gt;&lt;h3 id=&#34;转录组基础知识&#34;&gt;转录组基础知识
+&lt;/h3&gt;&lt;p&gt;以下记载了转录组最基础的一些知识，这些概念在RNA测序分析中是至关重要的：&lt;/p&gt;
+&lt;p&gt;1、基因组Genome：指某一特定物种细胞内或病毒颗粒内的一整套遗传物质（DNA或RNA）。对于人类而言，人类细胞是二倍体，有2套染色体，其中任何一套染色体的DNA序列即为一个基因组，比如人类基因组就是1-22号染色体+X+Y。在广义上，线粒体DNA也可以算作基因组的一部分。&lt;/p&gt;</description>
         </item>
         <item>
         <title>基于Seurat的单细胞分析标准流程</title>
